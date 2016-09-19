@@ -4,7 +4,7 @@
 	<title>Contact Our Offices</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<meta name="description" content="Student Calendar made for the specific use of Promise Scholars. Acces to UCSB Office events, calendars, deadlines, and contact information.">
+	<meta name="description" content="Google Analytics testing">
 	<!-- CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href="Bootstrap1.css" type="text/css" media="screen" rel="stylesheet" />
@@ -187,7 +187,7 @@
         <td>Canoeing</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onClick=”_gaq.push([‘_trackEvent’, ‘External Link’, ‘Hobby Link’, ‘Hobby- Canoeing’]);”>Where to find it</a></th> 
+		<th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onClick=â€_gaq.push([â€˜_trackEventâ€™, â€˜External Linkâ€™, â€˜Hobby Linkâ€™, â€˜Hobby- Canoeingâ€™]);â€>Where to find it</a></th> 
       </tr>
  
       <tr>
@@ -229,6 +229,20 @@
   </table>
   </div>
 </div>
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function(){document.location = url;}
+   });
+}
+</script>
 
 </body>
 </html>
