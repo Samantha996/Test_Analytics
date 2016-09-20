@@ -4,7 +4,7 @@
 	<title>Contact Our Offices</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<meta name="description" content="Student Calendar made for the specific use of Promise Scholars. Acces to UCSB Office events, calendars, deadlines, and contact information.">
+	<meta name="description" content="Google Analytics testing">
 	<!-- CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href="Bootstrap1.css" type="text/css" media="screen" rel="stylesheet" />
@@ -21,7 +21,6 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-84404020-1', 'auto');
-  ga('require', 'linkid');
   ga('send', 'pageview');
 
 </script>
@@ -39,6 +38,7 @@ var trackOutboundLink = function(url) {
    });
 }
 </script>
+	
 </head>
 
 <body>
@@ -52,7 +52,7 @@ var trackOutboundLink = function(url) {
 		<h2>Possible Hobbies</h2>
 	</div>
 	<div class="container">
-  <h2>Hobby 1</h2>
+  <h2 id="test">H<obby 1</h2>
   <p>Are you more of a stay at home person?</p>
   <div class="table-responsive">
   <table class="table">
@@ -71,7 +71,7 @@ var trackOutboundLink = function(url) {
         <td>Cooking</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults">Where to find it</a></th>
+		<th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults" onclick="trackOutboundLink('https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults');return false;">Where to find it</a></th>
       </tr>
  
       <tr>
@@ -79,7 +79,7 @@ var trackOutboundLink = function(url) {
         <td>Reading</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="http://www.notsoboringlife.com/list-of-hobbies/">Where to find it</a></th>
+		<th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 	  
 	        <tr>
@@ -88,7 +88,7 @@ var trackOutboundLink = function(url) {
         
         <td>35</td>
         <td>New York</td>
-        <th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults">Where to find it</a></th>
+        <th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 
 	        <tr>
@@ -97,7 +97,7 @@ var trackOutboundLink = function(url) {
         
         <td>35</td>
         <td>New York</td>
-       <th><a href="http://www.notsoboringlife.com/list-of-hobbies/">Where to find it</a></th>
+       <th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 
 	        <tr>
@@ -106,7 +106,7 @@ var trackOutboundLink = function(url) {
         
         <td>35</td>
         <td>New York</td>
-       <th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults/">Where to find it</a></th>
+       <th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults/" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 
     </tbody>
@@ -135,14 +135,14 @@ var trackOutboundLink = function(url) {
         <td>Sprinting</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults">Where to find it</a></th>
+		<th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
       <tr>
          <td>2</td>
         <td>Canoeing</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults">Where to find it</a></th>
+		<th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
  
       <tr>
@@ -150,7 +150,7 @@ var trackOutboundLink = function(url) {
         <td>Hiking</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="http://www.notsoboringlife.com/list-of-hobbies/">Where to find it</a></th>
+		<th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 	  
 	        <tr>
@@ -159,7 +159,7 @@ var trackOutboundLink = function(url) {
         
         <td>35</td>
         <td>New York</td>
-        <th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults">Where to find it</a></th>
+        <th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 
 	        <tr>
@@ -168,7 +168,7 @@ var trackOutboundLink = function(url) {
         
         <td>35</td>
         <td>New York</td>
-       <th><a href="http://www.notsoboringlife.com/list-of-hobbies/">Where to find it</a></th>
+       <th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 
 	        <tr>
@@ -177,7 +177,7 @@ var trackOutboundLink = function(url) {
         
         <td>35</td>
         <td>New York</td>
-       <th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults/">Where to find it</a></th>
+       <th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults/" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 
     </tbody>
@@ -206,7 +206,7 @@ var trackOutboundLink = function(url) {
         <td>Racing</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults">Where to find it</a></th>
+		<th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 	  <tr>
          <td>2</td>
@@ -221,7 +221,7 @@ var trackOutboundLink = function(url) {
         <td>Hiking</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="https://en.wikipedia.org/wiki/List_of_hobbies">Where to find it</a></th>
+		<th><a href="https://en.wikipedia.org/wiki/List_of_hobbies" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 	  
 	        <tr>
@@ -230,7 +230,7 @@ var trackOutboundLink = function(url) {
         
         <td>35</td>
         <td>New York</td>
-        <th><a href="http://www.notsoboringlife.com/list-of-hobbies/">Where to find it</a></th>
+        <th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 
 	        <tr>
@@ -239,7 +239,7 @@ var trackOutboundLink = function(url) {
         
         <td>35</td>
         <td>New York</td>
-       <th><a href="https://en.wikipedia.org/wiki/List_of_hobbies">Where to find it</a></th>
+       <th><a href="https://en.wikipedia.org/wiki/List_of_hobbies" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 
 	        <tr>
@@ -248,13 +248,15 @@ var trackOutboundLink = function(url) {
         
         <td>35</td>
         <td>New York</td>
-       <th><a href="http://www.notsoboringlife.com/list-of-hobbies/">Where to find it</a></th>
+       <th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
       </tr>
 
     </tbody>
   </table>
   </div>
 </div>
+
+
 
 </body>
 </html>
