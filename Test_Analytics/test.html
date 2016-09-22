@@ -22,7 +22,14 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+var _gaq = _gaq || [];
+var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_require', 'inpage_linkid', https://samantha996.github.io/Test_Analytics/Test_Analytics/test.html]);
+_gaq.push(['_setAccount', 'UA-84404020-1']);
+_gaq.push(['_trackPageview']);
+
 ga('create', 'UA-84404020-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');
 </script>
 
