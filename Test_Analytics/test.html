@@ -26,8 +26,23 @@
 
   ga('create', 'UA-84404020-1', 'auto');
   ga('send', 'pageview');
-
+	</script>
+	<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function(){document.location = url;}
+   });
+}
 </script>
+
+
 
 	
 </head>
@@ -44,7 +59,7 @@
 	</div>
 	<div id="test"></div>
 	<div class="container">
-  <h2 id="test">Hobby 1</h2>
+  <h2 id="test">OutBound Links</h2>
   <p>Are you more of a stay at home person?</p>
   <div class="table-responsive">
   <table class="table">
@@ -63,7 +78,7 @@
         <td>Cooking</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults" onclick="trackOutboundLink('https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults');return false;">Where to find it</a></th>
+		<th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onclick="trackOutboundLink('http://www.notsoboringlife.com/list-of-hobbies/'); return false;">Check out example.com</a></th>
       </tr>
  
       <tr>
@@ -71,7 +86,7 @@
         <td>Reading</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
+		<th><a href="https://www.youtube.com/embed/9MXKEyFMICg?autoplay=1" onclick="trackOutboundLink('https://www.youtube.com/embed/9MXKEyFMICg?autoplay=1');return false;">Where to find it</a></th>
       </tr>
 	  
 	        <tr>
@@ -80,7 +95,7 @@
         
         <td>35</td>
         <td>New York</td>
-        <th><a href="https://www.buzzfeed.com/augustafalletta/hell-yeah-hobbies-for-adults" onclick="trackOutboundLink('#test');return false;">Where to find it</a></th>
+        <th><a href="https://www.youtube.com/embed/VkhRxquVepI?autoplay=1" onclick="trackOutboundLink('https://www.youtube.com/embed/VkhRxquVepI?autoplay=1');return false;">Where to find it</a></th>
       </tr>
 
 	        <tr>
@@ -89,7 +104,7 @@
         
         <td>35</td>
         <td>New York</td>
-       <th><a href="https://github.com/Samantha996/Test_Analytics/edit/gh-pages/Test_Analytics/test.html">Where to find it</a></th>
+       <th><a href="https://github.com/"  onclick="trackOutboundLink('https://github.com/'); return false;">Where to find it</a></th>
       </tr>
 
 	        <tr>
@@ -98,7 +113,8 @@
         
         <td>35</td>
         <td>New York</td>
-       <th><a href="//www.finaid.ucsb.edu/docs/default-source/Tutorials/2014-2015/5-minute-fafsa.swf">Where to find it</a></th>
+			
+       <th><a href="http://www.notsoboringlife.com/list-of-hobbies/" onclick="trackOutboundLink('http://www.notsoboringlife.com/list-of-hobbies/'); return false;">Where to find it</a></th>
       </tr>
 
     </tbody>
@@ -108,7 +124,7 @@
 
 
 <div class="container">
-  <h2>Hobby 2</h2>
+  <h2>Inbound links</h2>
   <p>Are you feeling adventurous?</p>
   <div class="table-responsive">
   <table class="table">
@@ -178,7 +194,7 @@
 </div>
 
 <div class="container">
-  <h2>Hobby 3</h2>
+  <h2>Extra Testing</h2>
   <p>Netflix and chill?</p>
   <div class="table-responsive">
   <table class="table">
