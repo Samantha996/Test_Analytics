@@ -26,6 +26,11 @@
   ga('create', 'UA-84404020-1', 'auto');
   ga('require', 'linkid');
   ga('send', 'pageview');
+  ga('send', 'event', 'In-Page Links',link,
+     document.location.pathname + document.location.search, {
+                        "hitCallback": hitBack
+                    }
+    );
  
 
 </script>
