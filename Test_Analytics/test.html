@@ -86,7 +86,7 @@ jQuery(function() {
         <td>Reading</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a id="olink2" href="#container" onclick="trackInBoundLink('#container');return false;">olink2</a></th>
+		<th><a id="olink2" href="#container" onclick="trackIn-PageLink('#container');return false;">olink2</a></th>
       </tr>
 	  
 	        <tr>
@@ -341,7 +341,7 @@ function _gaLt(event) {
                     "send", "event", "Outgoing Links", link,
                     document.location.pathname + document.location.search
                 );
-		   ga('send', 'event', 'In-Page Links', 'click', 'collapsibles',
+		   ga('send', 'event', 'In-Page Links', link,
 		     document.location.pathname + document.location.search
 		 );
             } 
@@ -354,7 +354,7 @@ function _gaLt(event) {
                     document.location.pathname + document.location.search, {
                         "hitCallback": hitBack
                     }
-		ga('send', 'event', 'In-Page Links', 'click', 'collapsibles',
+		ga('send', 'event', 'In-Page Links', link,
 		     document.location.pathname + document.location.search
 		 );
                 );
