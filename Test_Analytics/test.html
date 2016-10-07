@@ -22,6 +22,7 @@
   	ga('create', 'UA-84404020-1', 'auto');
   	ga('require', 'linkid');
   	ga('send', 'pageview');
+	ga("send", "event", "category", "click", "In-Page Links", 0);
 
 </script>
 </head>
@@ -126,7 +127,7 @@
         <td>Sprinting</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a href="#test" id="test-6">Where to find it</a></th>
+		<th><a href="#test" id="test-6" onClick="_gaq.push([‘_trackEvent’, ‘Category’, ‘click’, ‘In-Page Links’, ‘0’]);">Where to find it</a></th>
       </tr>
       <tr>
          <td>2</td>
