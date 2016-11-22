@@ -301,12 +301,12 @@ function _gaLt(event) {
         el = el.parentNode;
     }
     /* if a link with valid href has been clicked */
-    if (el && el.href) {
+    if (el && el.href ) {
         var link = el.href;
         /* Only if it is an external link */
         if (link.indexOf(location.host) == -1 && !link.match(/^javascript\:/i) || link.indexOf(location.host) == 1 && !link.match(/^javascript\:/i)) {
             /* Is actual target set and not _(self|parent|top)? */
-            var target = (el.target && !el.target.match(/^_(self|parent|top)$/i)) ? el.target : false;
+            var target = (el.target && !el.target.match(/^_(self|parent|top)$/i)) ? el.target : true;
             /* Assume a target if Ctrl|shift|meta-click */
             if (event.ctrlKey || event.shiftKey || event.metaKey || event.which == 2) {
         		target = "_blank";
@@ -340,7 +340,9 @@ function _gaLt(event) {
                         "hitCallback": hitBack
                     }
 		ga('send', 'event', 'In-Page Links', link,
-		     document.location.pathname + document.location.search
+		     document.location.pathname, {
+			"hitCallback": hitBack
+			}
 		 );
                 );
                 /* Run hitCallback if GA takes longer than 1 second */
