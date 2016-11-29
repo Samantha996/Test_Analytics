@@ -57,9 +57,9 @@
 		
 <div class="container">	
 	<h2> Button Types</h2>
-		<button type="button" class="btn btn-primary btn-lg">Large</button>
-		<button type="button" class="btn btn-primary btn-md">Medium</button>
-		<button type="button" class="btn btn-primary btn-sm">Small</button>
+		<button type="button" class="btn btn-primary btn-lg" href="#container" onclick="trackInPageLink(el.href);return true;">Large</button>
+		<button type="button" class="btn btn-primary btn-md" href="#container" onclick="trackInPageLink('button');return true;">Medium</button>
+		<button type="button" class="btn btn-primary btn-sm" id="olink2" href="#container" onclick="trackInPageLink(el.value);return true;">Small</button>
 		<button type="button" class="btn btn-primary btn-xs">XSmall</button>
 </div>	
 		
@@ -136,7 +136,7 @@ Try it Yourself
         <td>Cooking</td>
         <td>0-100</td>
         <td>New York</td>
-		<th><a id="olink" href=”#test” onclick=”javascript:pageTracker._trackPageview(‘In Page’);”target=”blank”>olink1</a></th>
+		<th><a id="olink2" href="#container" onclick="trackInPageLink('#container');return true;">>olink1</a></th>
       </tr>
  
       <tr>
@@ -385,6 +385,46 @@ Try it Yourself
                     ga(
                         "send", "event", "Outgoing Links", link,
                         document.location.pathname + document.location.search, {
+                            "hitCallback": hitBack
+                        }
+                    );
+
+                    /* Run hitCallback again if GA takes longer than 1 second */
+                    setTimeout(hitBack, 1000);
+                }
+            }
+        }
+	    else if (link.indexOf(location.host) == 1 && link.match(/^javascript\:/i)) {
+
+                /* Is actual target set and not _(self|parent|top)? */
+                var target = (el.target && !el.target.match(/^_(self|parent|top)$/i)) ? el.target : false;
+
+                /* Assume a target if Ctrl|shift|meta-click */
+                if (event.ctrlKey || event.shiftKey || event.metaKey || event.which == 2) {
+                    target = "_blank";
+                }
+
+                var hbrun = false; // tracker has not yet run
+
+                /* HitCallback to open link in same window after tracker */
+                var hitBack = function() {
+                    /* run once only */
+                    if (hbrun) return;
+                    hbrun = true;
+                    window.location.href = link;
+                };
+
+                if (target) { /* If target opens a new window then just track */
+                    ga(
+                        "send", "event", "click", "In-Page Links", link,
+                        
+                    );
+                } else { /* Prevent standard click, track then open */
+                    event.preventDefault ? event.preventDefault() : event.returnValue = !1;
+                    /* send event with callback */
+                    ga(
+                        "send", "event", "In-Page Links", link,
+                        document.location.pathname, {
                             "hitCallback": hitBack
                         }
                     );
